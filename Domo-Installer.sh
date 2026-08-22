@@ -43,7 +43,7 @@ case $CHOICE in
   cmake -DCMAKE_BUILD_TYPE=Beta .
   make
   cd ~
-  wget http://ftp.nl.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.2l-1~bpo8+1_armhf.deb
+  wget http://archive.debian.org/debian/pool/main/o/openssl/libssl1.0.0_1.0.2l-1~bpo8+1_armhf.deb
   sudo dpkg -i libssl1.0.0_1.0.2l-1~bpo8+1_armhf.deb
   sudo usermod -a -G dialout $USER
 
