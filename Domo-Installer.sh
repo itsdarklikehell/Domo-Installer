@@ -119,6 +119,14 @@ stop_service() {
   fi
 }
 
+# ---- homelab stacks (optionele module) ------------------------------------
+# Wordt alleen aangeboden als de module aanwezig is naast dit script.
+HOMELAB_MODULE="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/homelab-stacks.sh"
+if [[ -f "$HOMELAB_MODULE" ]]; then
+  # shellcheck source=/dev/null
+  source "$HOMELAB_MODULE"
+fi
+
 # ---- install actions -----------------------------------------------------
 install_release() {
   local channel="release"
@@ -213,6 +221,7 @@ MENU() {
       "3)" "Installeer Domoticz (Broncode bouwen)." \
       "4)" "Update Domoticz." \
       "5)" "Backup Domoticz." \
+      "6)" "Status homelab media/AI stacks." \
       "exit)" "Script afsluiten" 3>&2 2>&1 1>&3) || { echo "Geannuleerd."; exit 0; }
 
     case "$CHOICE" in
@@ -221,6 +230,7 @@ MENU() {
       "3)") install_source ;;
       "4)") update_domoticz ;;
       "5)") backup_domoticz ;;
+      "6)") if declare -F check_homelab_stacks >/dev/null; then check_homelab_stacks all; else msg_warn "homelab-stacks.sh module niet gevonden."; fi ;;
       "exit)") msg_ok "Tot ziens."; exit 0 ;;
       *) msg_warn "Onbekene keuze: $CHOICE" ;;
     esac
