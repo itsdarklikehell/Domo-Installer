@@ -1,20 +1,23 @@
 # Domo-Installer
-this (menu)script will give you a guided installation for domoticz.
 
+Dit (menu)script geeft een gestroomlijnde installatie voor Domoticz.
+
+```bash
 bash <(curl -Ls https://github.com/hmol33/Domo-Installer/raw/master/Domo-Installer.sh)
-
+```
 
 ---
 
-## 🎥 Gource Visualization
+## 🎥 Gource Visualisatie
 
 De ontwikkelhistorie van dit project in een film:
 
-<video src="https://raw.githubusercontent.com/itsdarklikehell/Domo-Installer/master/gource.mp4" controls width="100%"></video>
+<video src="https://raw.githubusercontent.com/itsdarklikehell/Domo-Installer/master/gource-720p.mp4" controls width="100%"></video>
 
-*De video wordt automatisch gegenereerd door de [Gource workflow](.github/workflows/gource.yml) bij elke push.*
+*De video wordt automatisch gegenereerd door de [Gource workflow](.github/workflows/gource.yml) bij elke push — rendered via [nbprojekt/gource-action@v1.3.0](https://github.com/marketplace/actions/gource-action) in 1080p/60fps. Het artifact is 30 dagen beschikbaar via Actions.*
 
 Lokale video genereren:
+
 ```bash
 gource --max-files 1000 --key -800x600 \
   --highlight-users --filename-time 3 --output-framerate 25 \
