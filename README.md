@@ -3,6 +3,7 @@
 <img src="https://img.shields.io/github/stars/hmol33/Domo-Installer?style=flat-square&color=blue" alt="Stars">
 <img src="https://img.shields.io/github/forks/hmol33/Domo-Installer?style=flat-square&color=green" alt="Forks">
 <img src="https://img.shields.io/github/license/hmol33/Domo-Installer?style=flat-square" alt="License">
+<img src="https://img.shields.io/github/actions/workflow/status/hmol33/Domo-Installer/ci.yml?branch=main&label=CI&style=flat-square" alt="CI Status">
 
 Een (menu)script dat je een geleide installatie geeft voor Domoticz.
 
